@@ -95,7 +95,7 @@ namespace System.Runtime.Serialization.Plists.Test
             Assert.AreEqual("¡™£¢∞§¶•ªº–≠πøˆ¨¥†®´∑œ", dictionary["Unicode"]);
             Assert.AreEqual(false, dictionary["False"]);
             Assert.IsInstanceOfType(dictionary["Data"], typeof(byte[]));
-            Assert.AreEqual(new DateTime(1982, 05, 28, 7, 0, 0), dictionary["Date"]);
+            Assert.AreEqual(new DateTime(1982, 05, 28, 14, 0, 0, DateTimeKind.Utc).ToLocalTime(), dictionary["Date"]);
             Assert.AreEqual(true, dictionary["True"]);
             Assert.AreEqual(3.14159, dictionary["Pi"]);
             Assert.AreEqual("World", dictionary["Hello"]);
